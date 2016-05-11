@@ -5,6 +5,8 @@
  */
 package escapefrominsanityisland;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author warllen and Felipe
@@ -17,6 +19,7 @@ public class EscapeFromInsanityIsland {
     public static void main(String[] args) {
         System.out.println("Testando git");
         System.out.println("Other Line");
+        JOptionPane.showMessageDialog(null, "Test Swing send to git!");
         
     }
     

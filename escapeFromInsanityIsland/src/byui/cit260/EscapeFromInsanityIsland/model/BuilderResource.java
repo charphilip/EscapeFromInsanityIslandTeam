@@ -12,30 +12,31 @@ import java.util.Objects;
  *
  * @author warllen
  */
-public class BuilderResource extends Resources implements Serializable{
+public class BuilderResource implements Serializable{
     
-    private String nameTool;
-    private int quantityStore;
+    private String name;    
+    private int quantityStored;
     private String descriptionTool;
     private String characteristicResource;
+    private Resource resource;
 
     public BuilderResource() {
     }
 
-    public String getNameTool() {
-        return nameTool;
+    public String getName() {
+        return name;
     }
 
-    public void setNameTool(String nameTool) {
-        this.nameTool = nameTool;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getQuantityStore() {
-        return quantityStore;
+    public int getQuantityStored() {
+        return quantityStored;
     }
 
-    public void setQuantityStore(int quantityStore) {
-        this.quantityStore = quantityStore;
+    public void setQuantityStored(int quantityStored) {
+        this.quantityStored = quantityStored;
     }
 
     public String getDescriptionTool() {
@@ -54,13 +55,22 @@ public class BuilderResource extends Resources implements Serializable{
         this.characteristicResource = characteristicResource;
     }
 
+    public Resource getResource() {
+        return resource;
+    }
+
+    public void setResource(Resource resource) {
+        this.resource = resource;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 31 * hash + Objects.hashCode(this.nameTool);
-        hash = 31 * hash + this.quantityStore;
-        hash = 31 * hash + Objects.hashCode(this.descriptionTool);
-        hash = 31 * hash + Objects.hashCode(this.characteristicResource);
+        hash = 89 * hash + Objects.hashCode(this.name);
+        hash = 89 * hash + this.quantityStored;
+        hash = 89 * hash + Objects.hashCode(this.descriptionTool);
+        hash = 89 * hash + Objects.hashCode(this.characteristicResource);
+        hash = 89 * hash + Objects.hashCode(this.resource);
         return hash;
     }
 
@@ -73,10 +83,10 @@ public class BuilderResource extends Resources implements Serializable{
             return false;
         }
         final BuilderResource other = (BuilderResource) obj;
-        if (!Objects.equals(this.nameTool, other.nameTool)) {
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (this.quantityStore != other.quantityStore) {
+        if (this.quantityStored != other.quantityStored) {
             return false;
         }
         if (!Objects.equals(this.descriptionTool, other.descriptionTool)) {
@@ -85,12 +95,15 @@ public class BuilderResource extends Resources implements Serializable{
         if (!Objects.equals(this.characteristicResource, other.characteristicResource)) {
             return false;
         }
+        if (!Objects.equals(this.resource, other.resource)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "BuilderResources{" + "nameTool=" + nameTool + ", quantityStore=" + quantityStore + ", descriptionTool=" + descriptionTool + ", characteristicResource=" + characteristicResource + '}';
+        return "BuilderResource{" + "name=" + name + ", quantityStored=" + quantityStored + ", descriptionTool=" + descriptionTool + ", characteristicResource=" + characteristicResource + ", resource=" + resource + '}';
     }
        
 }

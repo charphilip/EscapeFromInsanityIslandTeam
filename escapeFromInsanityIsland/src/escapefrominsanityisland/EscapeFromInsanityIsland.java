@@ -5,11 +5,12 @@
  */
 package escapefrominsanityisland;
 
-import javax.swing.JOptionPane;
+import byui.cit260.EscapeFromInsanityIsland.model.Game;
+import byui.cit260.EscapeFromInsanityIsland.model.GroundChallenge;
 
 /**
  *
- * @author warllen and Felipe
+ * @author FELIPE
  */
 public class EscapeFromInsanityIsland {
 
@@ -17,10 +18,16 @@ public class EscapeFromInsanityIsland {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Testando git");
-        System.out.println("Other Line");
-        JOptionPane.showMessageDialog(null, "Test Swing send to git!");
-        
+       
+       Game game1 = new Game();
+       
+       //Calling of function test
+       game1.setTotalTime("11:00");
+       game1.setNoPeople(true);
+       
+        GroundChallenge gc = new GroundChallenge();
+        gc.setDescription("Warllen Almas");
+        System.out.println(game1.getTotalTime() + "\n" + game1.isNoPeople() + "\n" + gc.getDescription());
     }
     
 }

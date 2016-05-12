@@ -12,7 +12,8 @@ import java.util.Objects;
  *
  * @author warllen
  */
-public class WaterChallenges extends Challenges implements Serializable{
+public class GroundChallenge extends Challenge implements Serializable{
+    
     
     private int poinGaineds;
     private String experienceReceived;
@@ -20,7 +21,7 @@ public class WaterChallenges extends Challenges implements Serializable{
     private String problem;
     private String solution;
 
-    public WaterChallenges() {
+    public GroundChallenge() {
     }
 
     public int getPoinGaineds() {
@@ -65,12 +66,12 @@ public class WaterChallenges extends Challenges implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 17 * hash + this.poinGaineds;
-        hash = 17 * hash + Objects.hashCode(this.experienceReceived);
-        hash = 17 * hash + Objects.hashCode(this.name);
-        hash = 17 * hash + Objects.hashCode(this.problem);
-        hash = 17 * hash + Objects.hashCode(this.solution);
+        int hash = 5;
+        hash = 67 * hash + this.poinGaineds;
+        hash = 67 * hash + Objects.hashCode(this.experienceReceived);
+        hash = 67 * hash + Objects.hashCode(this.name);
+        hash = 67 * hash + Objects.hashCode(this.problem);
+        hash = 67 * hash + Objects.hashCode(this.solution);
         return hash;
     }
 
@@ -82,7 +83,7 @@ public class WaterChallenges extends Challenges implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final WaterChallenges other = (WaterChallenges) obj;
+        final GroundChallenge other = (GroundChallenge) obj;
         if (this.poinGaineds != other.poinGaineds) {
             return false;
         }
@@ -103,7 +104,7 @@ public class WaterChallenges extends Challenges implements Serializable{
 
     @Override
     public String toString() {
-        return "WaterChallenges{" + "poinGaineds=" + poinGaineds + ", experienceReceived=" + experienceReceived + ", name=" + name + ", problem=" + problem + ", solution=" + solution + '}';
+        return "GroundChallenges{" + "poinGaineds=" + poinGaineds + ", experienceReceived=" + experienceReceived + ", name=" + name + ", problem=" + problem + ", solution=" + solution + '}';
     }
-
+    
 }

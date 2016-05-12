@@ -12,14 +12,14 @@ import java.util.Objects;
  *
  * @author warllen
  */
-public class BuilderResources extends Resources implements Serializable{
+public class BuilderResource extends Resources implements Serializable{
     
     private String nameTool;
     private int quantityStore;
     private String descriptionTool;
     private String characteristicResource;
 
-    public BuilderResources() {
+    public BuilderResource() {
     }
 
     public String getNameTool() {
@@ -72,7 +72,7 @@ public class BuilderResources extends Resources implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final BuilderResources other = (BuilderResources) obj;
+        final BuilderResource other = (BuilderResource) obj;
         if (!Objects.equals(this.nameTool, other.nameTool)) {
             return false;
         }

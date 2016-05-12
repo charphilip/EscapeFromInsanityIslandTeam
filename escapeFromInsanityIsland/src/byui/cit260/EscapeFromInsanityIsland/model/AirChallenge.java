@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author warllen
  */
-public class AirChallenges extends Challenges implements Serializable{
+public class AirChallenge extends Challenge implements Serializable{
     
     private int poinGaineds;
     private String experienceReceived;
@@ -20,7 +20,7 @@ public class AirChallenges extends Challenges implements Serializable{
     private String problem;
     private String solution;
 
-    public AirChallenges() {
+    public AirChallenge() {
     }
 
     public int getPoinGaineds() {
@@ -82,7 +82,7 @@ public class AirChallenges extends Challenges implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final AirChallenges other = (AirChallenges) obj;
+        final AirChallenge other = (AirChallenge) obj;
         if (this.poinGaineds != other.poinGaineds) {
             return false;
         }

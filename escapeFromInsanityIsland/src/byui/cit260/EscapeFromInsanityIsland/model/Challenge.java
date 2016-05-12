@@ -12,13 +12,13 @@ import java.util.Objects;
  *
  * @author warllen
  */
-public class Challenges implements Serializable{
+public class Challenge implements Serializable{
     
     private String description;
     private String resourcesGained;
     private String displaySimbol;
 
-    public Challenges() {
+    public Challenge() {
     }
 
     public String getDescription() {
@@ -62,7 +62,7 @@ public class Challenges implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Challenges other = (Challenges) obj;
+        final Challenge other = (Challenge) obj;
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }

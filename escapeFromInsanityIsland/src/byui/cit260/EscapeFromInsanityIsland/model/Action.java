@@ -12,13 +12,13 @@ import java.util.Objects;
  *
  * @author warllen
  */
-public class Actions implements Serializable{
+public class Action implements Serializable{
     private String name;
     private String arrows;
     private String specialPowers;
     private String attack;
 
-    public Actions() {
+    public Action() {
     }
 
     public String getName() {
@@ -71,7 +71,7 @@ public class Actions implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Actions other = (Actions) obj;
+        final Action other = (Action) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }

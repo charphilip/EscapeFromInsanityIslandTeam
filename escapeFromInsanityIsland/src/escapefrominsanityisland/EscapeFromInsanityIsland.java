@@ -6,7 +6,7 @@
 package escapefrominsanityisland;
 
 import byui.cit260.EscapeFromInsanityIsland.model.Game;
-import byui.cit260.EscapeFromInsanityIsland.model.GroundChallenges;
+import byui.cit260.EscapeFromInsanityIsland.model.GroundChallenge;
 
 /**
  *
@@ -25,7 +25,7 @@ public class EscapeFromInsanityIsland {
        game1.setTotalTime("11:00");
        game1.setNoPeople(true);
        
-        GroundChallenges gc = new GroundChallenges();
+        GroundChallenge gc = new GroundChallenge();
         gc.setDescription("Warllen Almas");
         System.out.println(game1.getTotalTime() + "\n" + game1.isNoPeople() + "\n" + gc.getDescription());
     }

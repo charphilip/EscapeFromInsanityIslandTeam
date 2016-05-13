@@ -19,9 +19,19 @@ public class Resource implements Serializable{
     private String descriptionResource;
     private boolean availableResource;
     private BuilderResource builRes;
+    private Memory memory;
 
     public Resource() {
     }
+
+    public Memory getMemory() {
+        return memory;
+    }
+
+    public void setMemory(Memory memory) {
+        this.memory = memory;
+    }
+      
 
     public String getTypeResource() {
         return typeResource;

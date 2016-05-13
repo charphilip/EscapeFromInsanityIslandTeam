@@ -13,6 +13,7 @@ import java.util.Objects;
  * @author warllen
  */
 public class WaterChallenge extends Challenge implements Serializable{
+      
     
     private int poinGaineds;
     private String experienceReceived;

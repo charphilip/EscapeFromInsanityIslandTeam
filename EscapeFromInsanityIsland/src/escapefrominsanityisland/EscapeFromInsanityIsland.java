@@ -8,6 +8,7 @@ package escapefrominsanityisland;
 import byui.cit260.EscapeFromInsanityIsland.model.Game;
 import byui.cit260.EscapeFromInsanityIsland.model.GroundChallenge;
 import byui.cit260.EscapeFromInsanityIsland.model.Memory;
+import byui.cit260.EscapeFromInsanityIsland.model.WaterChallenge;
 
 /**
  *
@@ -34,6 +35,10 @@ public class EscapeFromInsanityIsland {
        test1.setExperienceGained(10);
        test1.setResourceSaved(5);
        System.out.println(test1.getExperienceGained());
+       
+        WaterChallenge wc = new WaterChallenge();
+        wc.setDescription("cccccccccc");
+        
           
              
        

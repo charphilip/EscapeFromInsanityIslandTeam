@@ -20,23 +20,6 @@ public class EscapeFromInsanityIsland {
      */
     public static void main(String[] args) {
        
-       Game game1 = new Game();
-       
-       //Calling of function test
-       game1.setTotalTime("11:00");
-       game1.setNoPeople(true);
-       
-        GroundChallenge gc = new GroundChallenge();
-        gc.setDescription("Warllen Almas");
-        System.out.println(game1.getTotalTime() + "\n" + game1.isNoPeople() + "\n" + gc.getDescription());
-        
-       Memory test1 = new Memory();
-       test1.setExperienceGained(10);
-       test1.setResourceSaved(5);
-       System.out.println(test1.getExperienceGained());
-          
-             
-       
     }
     
 }

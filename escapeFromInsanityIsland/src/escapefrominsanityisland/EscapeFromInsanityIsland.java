@@ -41,7 +41,7 @@ public class EscapeFromInsanityIsland {
         int option = 10;
         while(option != 0){
         
-            System.out.println("--------------------------------------\nChoose one class to show the text\n--------------------------------------");
+            System.out.println("--------------------------------------\nChoose one class to show the test\n--------------------------------------");
             System.out.println("1 Action");
             System.out.println("2 Challenge");
             System.out.println("3 GroundChallenge");

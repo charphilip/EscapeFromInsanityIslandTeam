@@ -86,6 +86,11 @@ public class Action implements Serializable{
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Action{" + "name=" + name + ", arrows=" + arrows + ", specialPowers=" + specialPowers + ", attack=" + attack + '}';
+    }
     
     
 }

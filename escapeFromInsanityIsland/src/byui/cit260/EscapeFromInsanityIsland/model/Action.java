@@ -19,6 +19,7 @@ public class Action implements Serializable{
     private String attack;
 
     public Action() {
+        
     }
 
     public String getName() {

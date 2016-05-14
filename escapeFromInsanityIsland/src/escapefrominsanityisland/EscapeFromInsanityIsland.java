@@ -80,7 +80,31 @@ public class EscapeFromInsanityIsland {
                     //Testing toString
                     
                     System.out.println(act);
-
+                    
+                    //Testing equals()
+                    
+                    Action action1 = new Action();
+                    action1.setName("Action 1");
+                    action1.setArrows("Action 1 Arrows");
+                    action1.setAttack("Action 1 Attack");
+                    action1.setSpecialPowers("Action 1 Special Power");
+                    
+                    Action action2 = new Action();
+                    action2.setName("Action 1");
+                    action2.setArrows("Action 1 Arrows");
+                    action2.setAttack("Action 1 Attack");
+                    action2.setSpecialPowers("Action 1 Special Power");
+                    
+                    Action action3 = new Action();
+                    action3.setName("Action 3");
+                    action3.setArrows("Action 3 Arrows");
+                    action3.setAttack("Action 3 Attack");
+                    action3.setSpecialPowers("Action 3 Special Power");
+                    
+                    System.out.println(action1.equals(action2));
+                                        
+                    System.out.println(action1.equals(action3));
+                    
                     break;
 
                 case 2:
@@ -103,7 +127,23 @@ public class EscapeFromInsanityIsland {
 
                     //Testing toString
                     System.out.println(challenge);
-
+                    
+                    //Testing equals()
+                    
+                    Challenge challenge1 = new Challenge();
+                    challenge1.setDescription("Test SetDescription Challenge");
+                    challenge1.setDisplaySimbol("Test SetDisplaySimbol Challenge");
+                    challenge1.setResourcesGained("Test setResourceGained");
+                    
+                    Challenge challenge2 = new Challenge();
+                    challenge2.setDescription("Test SetDescription Challenge 2");
+                    challenge2.setDisplaySimbol("Test SetDisplaySimbol Challenge 2");
+                    challenge2.setResourcesGained("Test setResourceGained 2");
+                                        
+                    System.out.println(challenge.equals(challenge1));
+                                        
+                    System.out.println(challenge.equals(challenge2));
+                    
                     break;
                     
                 case 3:
@@ -111,17 +151,18 @@ public class EscapeFromInsanityIsland {
                     //Testing class GroundChallenge
 
                     GroundChallenge gChallenge = new GroundChallenge();
+                    
                     //Testing Setters
                     
                     System.out.println("--------------------------------\n Testing the Class GroundChallenge \n--------------------------------");
-                    gChallenge.setName("Test setName AirChallenge");
-                    gChallenge.setDescription("Test setDescriprion AirChallenge");
-                    gChallenge.setDisplaySimbol("Test setDisplaySimbol AirChallenge");
-                    gChallenge.setExperienceReceived("Test setExperienceReceived AirChallenge");
+                    gChallenge.setName("Test setName groundChallenge");
+                    gChallenge.setDescription("Test setDescriprion groundChallenge");
+                    gChallenge.setDisplaySimbol("Test setDisplaySimbol groundChallenge");
+                    gChallenge.setExperienceReceived("Test setExperienceReceived groundChallenge");
                     gChallenge.setPointsGaineds(10);
-                    gChallenge.setProblem("Test setProblem AirChallenge");
-                    gChallenge.setResourcesGained("Test setResouceGained AirChallenge");
-                    gChallenge.setSolution("Test setSoulution AirChallenge");
+                    gChallenge.setProblem("Test setProblem GroundChallenge");
+                    gChallenge.setResourcesGained("Test setResouceGained GroundChallenge");
+                    gChallenge.setSolution("Test setSoulution GroundChallenge");
                                        
                      //Tesing getters
                     
@@ -137,7 +178,35 @@ public class EscapeFromInsanityIsland {
                     //Testing toString
                     
                     System.out.println(gChallenge);
-
+                    
+                    //Testing equals()
+                    
+                    GroundChallenge gChallenge1 = new GroundChallenge();
+                    
+                    gChallenge1.setName("Test setName GroundChallenge");
+                    gChallenge1.setDescription("Test setDescriprion GroundChallenge");
+                    gChallenge1.setDisplaySimbol("Test setDisplaySimbol GroundChallenge");
+                    gChallenge1.setExperienceReceived("Test setExperienceReceived GroundChallenge");
+                    gChallenge1.setPointsGaineds(10);
+                    gChallenge1.setProblem("Test setProblem GroundChallenge");
+                    gChallenge1.setResourcesGained("Test setResouceGained GroundChallenge");
+                    gChallenge1.setSolution("Test setSoulution GroundChallenge");
+                    
+                    GroundChallenge gChallenge2 = new GroundChallenge();
+                    
+                    gChallenge2.setName("Test setName GroundChallenge");
+                    gChallenge2.setDescription("Test setDescriprion GroundChallenge");
+                    gChallenge2.setDisplaySimbol("Test setDisplaySimbol GroundChallenge");
+                    gChallenge2.setExperienceReceived("Test setExperienceReceived GroundChallenge");
+                    gChallenge2.setPointsGaineds(10);
+                    gChallenge2.setProblem("Test setProblem GroundChallenge");
+                    gChallenge2.setResourcesGained("Test setResouceGained GroundChallenge");
+                    gChallenge2.setSolution("Test setSoulution GroundChallenge");
+                    
+                    System.out.println(gChallenge1.equals(gChallenge2));
+                    
+                    System.out.println(gChallenge.equals(gChallenge1));
+                    
                     break;
                     
                 case 4:
@@ -170,6 +239,34 @@ public class EscapeFromInsanityIsland {
 
                     //Testing toString
                     System.out.println(airChallenge);
+                    
+                    //Testing equals()
+                    
+                    AirChallenge airChallenge1 = new AirChallenge();
+                  
+                     airChallenge1.setName("Test setName AirChallenge");
+                    airChallenge1.setDescription("Test setDescriprion AirChallenge");
+                    airChallenge1.setDisplaySimbol("Test setDisplaySimbol AirChallenge");
+                    airChallenge1.setExperienceReceived("Test setExperienceReceived AirChallenge");
+                    airChallenge1.setPointsGaineds(10);
+                    airChallenge1.setProblem("Test setProblem AirChallenge");
+                    airChallenge1.setResourcesGained("Test setResouceGained AirChallenge");
+                    airChallenge1.setSolution("Test setSoulution AirChallenge");
+                    
+                     AirChallenge airChallenge2 = new AirChallenge();
+                  
+                     airChallenge1.setName("Test setName AirChallenge 2");
+                    airChallenge1.setDescription("Test setDescriprion AirChallenge 2");
+                    airChallenge1.setDisplaySimbol("Test setDisplaySimbol AirChallenge 2");
+                    airChallenge1.setExperienceReceived("Test setExperienceReceived AirChallenge 2");
+                    airChallenge1.setPointsGaineds(123);
+                    airChallenge1.setProblem("Test setProblem AirChallenge 2");
+                    airChallenge1.setResourcesGained("Test setResouceGained AirChallenge 2");
+                    airChallenge1.setSolution("Test setSoulution AirChallenge 2");
+                    
+                    System.out.println(airChallenge.equals(airChallenge));
+                    
+                    System.out.println(airChallenge.equals(airChallenge2));
                     
                     break;
                     
@@ -204,6 +301,34 @@ public class EscapeFromInsanityIsland {
                     //Testing toString
                     System.out.println(wChallenge);
                     
+                    //Testing equals()
+                    
+                    WaterChallenge wChallenge1 = new WaterChallenge();
+                    
+                    wChallenge1.setName("Test setName WaterChallenge");
+                    wChallenge1.setDescription("Test setDescriprion WaterChallenge");
+                    wChallenge1.setDisplaySimbol("Test setDisplaySimbol WaterChallenge");
+                    wChallenge1.setExperienceReceived("Test setExperienceReceived WaterChallenge");
+                    wChallenge1.setPointsGaineds(10);
+                    wChallenge1.setProblem("Test setProblem WaterChallenge");
+                    wChallenge1.setResourcesGained("Test setResouceGained WaterChallenge");
+                    wChallenge1.setSolution("Test setSoulution WaterChallenge");
+                    
+                    WaterChallenge wChallenge2 = new WaterChallenge();
+                    
+                    wChallenge2.setName("Test setName WaterChallenge 2");
+                    wChallenge2.setDescription("Test setDescriprion WaterChallenge 2");
+                    wChallenge2.setDisplaySimbol("Test setDisplaySimbol WaterChallenge 2");
+                    wChallenge2.setExperienceReceived("Test setExperienceReceived WaterChallenge 2");
+                    wChallenge2.setPointsGaineds(12);
+                    wChallenge2.setProblem("Test setProblem WaterChallenge 2");
+                    wChallenge2.setResourcesGained("Test setResouceGained WaterChallenge 2");
+                    wChallenge2.setSolution("Test setSoulution WaterChallenge 2");
+                    
+                    System.out.println(wChallenge.equals(wChallenge1));
+                    
+                    System.out.println(wChallenge.equals(wChallenge2));
+                    
                     break;
                     
                 case 6:
@@ -222,12 +347,30 @@ public class EscapeFromInsanityIsland {
                     
                     System.out.println("Description: " + scene.getDescription());
                     System.out.println("Participants: " + scene.getParticipants());
-                     System.out.println("Period TIme: " + scene.getPeriodTime());
+                    System.out.println("Period TIme: " + scene.getPeriodTime());
                      
                     //Testing toString
                      
                     System.out.println(scene);
                    
+                    //Testing equals
+                    
+                    Scene scene1 = new Scene();
+                    
+                    scene1.setDescription("Test setDescription Scene");
+                    scene1.setParticipants("Test setPaticipants Scene");
+                    scene1.setPeriodTime("Test setPeriodeTime Scene");
+                    
+                    Scene scene2 = new Scene();
+                    
+                    scene2.setDescription("Test setDescription Scene 2");
+                    scene2.setParticipants("Test setPaticipants Scene 2");
+                    scene2.setPeriodTime("Test setPeriodeTime Scene 2");
+                    
+                    System.out.println(scene.equals(scene1));
+                    
+                    System.out.println(scene.equals(scene2));
+                    
                     break;
                     
                 case 7:
@@ -258,6 +401,27 @@ public class EscapeFromInsanityIsland {
                      
                     System.out.println(bResource);
                     
+                    //Testing equals()
+                    
+                    BuilderResource bResource1 = new BuilderResource();
+                  
+                    bResource1.setName("Test setName BuilderResource");
+                    bResource1.setDescriptionTool("Test setDescriptionTool BuilderResource");
+                    bResource1.setCharacteristicResource("test setCharacteristicResource BuilderResource");
+                    bResource1.setQuantityStored(50);
+                    bResource1.setResource(null);
+                    
+                    BuilderResource bResource2 = new BuilderResource();
+                  
+                    bResource2.setName("Test setName BuilderResource2");
+                    bResource2.setDescriptionTool("Test setDescriptionTool BuilderResource 2");
+                    bResource2.setCharacteristicResource("test setCharacteristicResource BuilderResource 2");
+                    bResource2.setQuantityStored(60);
+                    bResource2.setResource(null);
+                    
+                    System.out.println(bResource.equals(bResource1));
+                    System.out.println(bResource.equals(bResource2));
+                    
                     break;
                     
                 case 8:
@@ -279,6 +443,23 @@ public class EscapeFromInsanityIsland {
                     //Tesing toString
                     
                     System.out.println(game);
+                    
+                    //Testing equals
+                    
+                    Game game1 = new Game();
+                  
+                    game1.setNoPeople(false);
+                    game1.setTotalTime("60");
+                    
+                    Game game2 = new Game();
+                  
+                    game2.setNoPeople(true);
+                    game1.setTotalTime("60");
+                    
+                    System.out.println(game.equals(game1));
+                    
+                    System.out.println(game.equals(game2));
+
                     
                     break;
                     

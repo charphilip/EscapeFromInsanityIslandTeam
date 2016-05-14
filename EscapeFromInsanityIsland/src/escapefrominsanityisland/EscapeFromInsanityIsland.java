@@ -9,9 +9,14 @@ import byui.cit260.EscapeFromInsanityIsland.model.Action;
 import byui.cit260.EscapeFromInsanityIsland.model.AirChallenge;
 import byui.cit260.EscapeFromInsanityIsland.model.BuilderResource;
 import byui.cit260.EscapeFromInsanityIsland.model.Challenge;
+import byui.cit260.EscapeFromInsanityIsland.model.Character;
 import byui.cit260.EscapeFromInsanityIsland.model.Game;
 import byui.cit260.EscapeFromInsanityIsland.model.GroundChallenge;
+import byui.cit260.EscapeFromInsanityIsland.model.Location;
+import byui.cit260.EscapeFromInsanityIsland.model.Map;
 import byui.cit260.EscapeFromInsanityIsland.model.Memory;
+import byui.cit260.EscapeFromInsanityIsland.model.Opponents;
+import byui.cit260.EscapeFromInsanityIsland.model.Player;
 import byui.cit260.EscapeFromInsanityIsland.model.Resource;
 import byui.cit260.EscapeFromInsanityIsland.model.Scene;
 import byui.cit260.EscapeFromInsanityIsland.model.WaterChallenge;
@@ -38,7 +43,7 @@ public class EscapeFromInsanityIsland {
         
         Scanner input;  
         input = new Scanner(System.in);
-        int option = 10;
+        int option = 15;
         while(option != 0){
         
             System.out.println("--------------------------------------\nChoose one class to show the test\n--------------------------------------");
@@ -50,6 +55,13 @@ public class EscapeFromInsanityIsland {
             System.out.println("6 Scene");
             System.out.println("7 BuilderResouce");
             System.out.println("8 Game");
+            System.out.println("9 Character");
+            System.out.println("10 Location");
+            System.out.println("11 Map");
+            System.out.println("12 Memory");
+            System.out.println("13 Opponents");
+            System.out.println("14 Player");
+            System.out.println("15 Resources");
             System.out.println("0 exit");
             System.out.println("\n Number:");
 
@@ -259,6 +271,8 @@ public class EscapeFromInsanityIsland {
                     System.out.println(bResource);
                     
                     break;
+
+//Felipe & Warllen test class GAME
                     
                 case 8:
                     
@@ -287,17 +301,201 @@ public class EscapeFromInsanityIsland {
                     System.out.println("Type a value between 1 and 8 \n or zero to exitd"
                             + "");
 
-            }
-        }
+            
 //*************************************************************************************************************************************************************
     
 //*************************************************************************************************
 //Felipe test class Start here
         
-       
+       case 9:
+                    
+                //Testing class CHARACTER
+                    Character principal = new Character();
+                  
+                //Testing Setters
+                    
+                    System.out.println("--------------------------------\n Testing Class CHARACTER\n--------------------------------");
+                    principal.setName("Ethan");
+                    principal.setDescription("Ethan will be the principal character in the Escape from Insanity Island game...");
+                                     
+                //Tesing getters
+                    
+                    System.out.println("Name: " + principal.getName());
+                    System.out.println("Description: " + principal.getDescription());
+                
+                //Testing toString
+                     
+                    System.out.println(principal);
+                    
+                    break;
+        
+        case 10:
+                    float coordin, col, row, explo;
+                    coordin = (float) 4.730211;
+                    col = (float) 20;
+                    row = (float) 15;
+                    explo = (float) 100;
+                //Testing class LOCATION
+                    
+                    Location firstPlace = new Location();
+                    
+                //Testing Setters
+                    
+                    System.out.println("--------------------------------\n Testing Class LOCATION\n--------------------------------");
+                    firstPlace.setCoordinates(coordin);
+                    firstPlace.setColumn(col);
+                    firstPlace.setRow(row);
+                    firstPlace.setExploredArea(explo);
+                    
+                    
+                //Tesing getters
+                    
+                    System.out.println("Coordinates: " + firstPlace.getCoordinates());
+                    System.out.println("Column: " + firstPlace.getColumn());
+                    System.out.println("Row: " + firstPlace.getRow());
+                    System.out.println("Explored Area: " + firstPlace.getExploredArea());
+                    System.out.println("Memory: " + firstPlace.getMemory());
+                    System.out.println("Map: " + firstPlace.getMap());
+                    
+                //Testing toString
+                     
+                    System.out.println(firstPlace);
+                    
+                    break;
+        
+        case 11:
+                    
+                //Testing class MAP
+                    
+                    Map ubication = new Map();
+                    
+                //Testing Setters
+                    
+                    System.out.println("--------------------------------\n Testing Class MAP\n--------------------------------");
+                    ubication.setColumnCount(30);
+                    ubication.setRowCount(20);
+                    
+                //Tesing getters
+                    
+                    System.out.println("Column Count: " + ubication.getColumnCount());
+                    System.out.println("Row Count: " + ubication.getRowCount());
+                                        
+                //Testing toString
+                     
+                    System.out.println(ubication);
+                    
+                    break;
+                    
+        case 12:
+                    
+                //Testing class MEMORY
+                    
+                    Memory brain = new Memory();
+                    
+                //Testing Setters
+                    
+                    System.out.println("--------------------------------\n Testing Class MEMORY\n--------------------------------");
+                    brain.setProgress("Medium");
+                    brain.setResourceSaved(5);
+                    brain.setExperienceGained(20);
+                    brain.setYearsRemembered(2);
+                    
+                //Tesing getters
+                    
+                    System.out.println("Progress: " + brain.getProgress());
+                    System.out.println("Resource Saved: " + brain.getResourceSaved());
+                    System.out.println("Experience Gained: " + brain.getExperienceGained());
+                    System.out.println("Years Remembered: " + brain.getYearsRemembered());
+                                        
+                //Testing toString
+                     
+                    System.out.println(brain);
+                    
+                    break;
+        
+        case 13:
+                    
+                //Testing class OPPONENTS
+                    
+                    Opponents enemy = new Opponents();
+                    
+                //Testing Setters
+                    
+                    System.out.println("--------------------------------\n Testing Class OPPONENTS\n--------------------------------");
+                    enemy.setName("Lion Beast");
+                    enemy.setRole("The Lion needs to stop the player into the jungle...");
+                    enemy.setScene("In the Jungle");
+                    
+                //Tesing getters
+                    
+                    System.out.println("Name: " + enemy.getName());
+                    System.out.println("Role: " + enemy.getRole());
+                    System.out.println("Scene: " + enemy.getScene());
+                                                            
+                //Testing toString
+                     
+                    System.out.println(enemy);
+                    
+                    break;
+                    
+        case 14:
+                    
+                //Testing class PLAYER
+                    
+                    Player endUser = new Player();
+                    
+                //Testing Setters
+                    
+                    System.out.println("--------------------------------\n Testing Class PLAYER\n--------------------------------");
+                    endUser.setName("FELIPE");
+                    endUser.setLevelPlayed(1);
+                    endUser.setEmotion("Lost");
+                    
+                //Tesing getters
+                    
+                    System.out.println("Name: " + endUser.getName());
+                    System.out.println("Level: " + endUser.getLevelPlayed());
+                    System.out.println("Emotion: " + endUser.getEmotion());
+                                                            
+                //Testing toString
+                     
+                    System.out.println(endUser);
+                    
+                    break;
+                    
+        case 15:
+                    
+                //Testing class RESOURCE
+                    
+                    Resource tool = new Resource();
+                    
+                //Testing Setters
+                    
+                    System.out.println("--------------------------------\n Testing Class RESOURCE\n--------------------------------");
+                    tool.setAvailableResource(true);
+                    tool.setTypeResource("Ground");
+                    tool.setQuantityStored(2);
+                    tool.setDescriptionResource("This tool will be used only in the Ground Challenges. Its use is to till the land");
+                    
+                    
+                //Tesing getters
+                    
+                    System.out.println("Type Resource: " + tool.getTypeResource());
+                    System.out.println("Quantity Stored: " + tool.getQuantityStored());
+                    System.out.println("Description: " + tool.getDescriptionResource());
+                    System.out.println("");
+                                                            
+                //Testing toString
+                     
+                    System.out.println(tool);
+                    
+                    break;
+                    
+                
                 
 //**************************************************************************************************
-       
+            }
+        }
     }
     
 }

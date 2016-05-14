@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  *
- * @author FELIPE
+ * @author Warllen
  */
 public class BuilderResource implements Serializable{
     

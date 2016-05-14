@@ -15,7 +15,7 @@ import java.util.Objects;
 public class WaterChallenge extends Challenge implements Serializable{
       
     
-    private int poinGaineds;
+    private int pointsGaineds;
     private String experienceReceived;
     private String name;
     private String problem;
@@ -24,12 +24,12 @@ public class WaterChallenge extends Challenge implements Serializable{
     public WaterChallenge() {
     }
 
-    public int getPoinGaineds() {
-        return poinGaineds;
+    public int getPointsGaineds() {
+        return pointsGaineds;
     }
 
-    public void setPoinGaineds(int poinGaineds) {
-        this.poinGaineds = poinGaineds;
+    public void setPointsGaineds(int pointsGaineds) {
+        this.pointsGaineds = pointsGaineds;
     }
 
     public String getExperienceReceived() {
@@ -67,7 +67,7 @@ public class WaterChallenge extends Challenge implements Serializable{
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 17 * hash + this.poinGaineds;
+        hash = 17 * hash + this.pointsGaineds;
         hash = 17 * hash + Objects.hashCode(this.experienceReceived);
         hash = 17 * hash + Objects.hashCode(this.name);
         hash = 17 * hash + Objects.hashCode(this.problem);
@@ -84,7 +84,7 @@ public class WaterChallenge extends Challenge implements Serializable{
             return false;
         }
         final WaterChallenge other = (WaterChallenge) obj;
-        if (this.poinGaineds != other.poinGaineds) {
+        if (this.pointsGaineds != other.pointsGaineds) {
             return false;
         }
         if (!Objects.equals(this.experienceReceived, other.experienceReceived)) {
@@ -104,7 +104,7 @@ public class WaterChallenge extends Challenge implements Serializable{
 
     @Override
     public String toString() {
-        return "WaterChallenges{" + "poinGaineds=" + poinGaineds + ", experienceReceived=" + experienceReceived + ", name=" + name + ", problem=" + problem + ", solution=" + solution + '}';
+        return "WaterChallenges{" + "poinGaineds=" + pointsGaineds + ", experienceReceived=" + experienceReceived + ", name=" + name + ", problem=" + problem + ", solution=" + solution + '}';
     }
 
 }

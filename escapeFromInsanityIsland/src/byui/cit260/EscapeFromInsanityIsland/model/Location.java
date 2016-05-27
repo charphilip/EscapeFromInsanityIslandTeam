@@ -14,10 +14,10 @@ import java.util.Objects;
  */
 public class Location implements Serializable{
     
-    private Float coordin;
-    private Float col;
+    private Float coordinates;
+    private Float column;
     private Float row;
-    private Float explo;
+    private Float exploredArea;
     private Memory memory;
     private Map map;
 
@@ -25,19 +25,19 @@ public class Location implements Serializable{
     }
 
     public Float getCoordinates() {
-        return coordin;
+        return coordinates;
     }
 
     public void setCoordinates(Float coordinates) {
-        this.coordin = coordin;
+        this.coordinates = coordinates;
     }
 
     public Float getColumn() {
-        return col;
+        return column;
     }
 
     public void setColumn(Float column) {
-        this.col = col;
+        this.column = column;
     }
 
     public Float getRow() {
@@ -49,11 +49,11 @@ public class Location implements Serializable{
     }
 
     public Float getExploredArea() {
-        return explo;
+        return exploredArea;
     }
 
     public void setExploredArea(Float exploredArea) {
-        this.explo = explo;
+        this.exploredArea = exploredArea;
     }
 
     public Memory getMemory() {
@@ -76,10 +76,10 @@ public class Location implements Serializable{
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 41 * hash + Objects.hashCode(this.coordin);
-        hash = 41 * hash + Objects.hashCode(this.col);
+        hash = 41 * hash + Objects.hashCode(this.coordinates);
+        hash = 41 * hash + Objects.hashCode(this.column);
         hash = 41 * hash + Objects.hashCode(this.row);
-        hash = 41 * hash + Objects.hashCode(this.explo);
+        hash = 41 * hash + Objects.hashCode(this.exploredArea);
         hash = 41 * hash + Objects.hashCode(this.memory);
         return hash;
     }
@@ -93,16 +93,16 @@ public class Location implements Serializable{
             return false;
         }
         final Location other = (Location) obj;
-        if (!Objects.equals(this.coordin, other.coordin)) {
+        if (!Objects.equals(this.coordinates, other.coordinates)) {
             return false;
         }
-        if (!Objects.equals(this.col, other.col)) {
+        if (!Objects.equals(this.column, other.column)) {
             return false;
         }
         if (!Objects.equals(this.row, other.row)) {
             return false;
         }
-        if (!Objects.equals(this.explo, other.explo)) {
+        if (!Objects.equals(this.exploredArea, other.exploredArea)) {
             return false;
         }
         if (!Objects.equals(this.memory, other.memory)) {
@@ -113,7 +113,7 @@ public class Location implements Serializable{
 
     @Override
     public String toString() {
-        return "Location{" + "coordinates=" + coordin + ", column=" + col + ", row=" + row + ", exploredArea=" + explo + ", memory=" + memory + '}';
+        return "Location{" + "coordinates=" + coordinates + ", column=" + column + ", row=" + row + ", exploredArea=" + exploredArea + ", memory=" + memory + '}';
     }
     
 }

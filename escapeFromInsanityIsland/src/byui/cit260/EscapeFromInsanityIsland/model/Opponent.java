@@ -12,14 +12,14 @@ import java.util.Objects;
  *
  * @author FELIPE
  */
-public class Opponents implements Serializable {
+public class Opponent implements Serializable {
     
     // Class instance variables
     private String name;
     private String role;
     private String scene;
 
-    public Opponents() {
+    public Opponent() {
     }
 
     public String getName() {
@@ -66,7 +66,7 @@ public class Opponents implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Opponents other = (Opponents) obj;
+        final Opponent other = (Opponent) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }

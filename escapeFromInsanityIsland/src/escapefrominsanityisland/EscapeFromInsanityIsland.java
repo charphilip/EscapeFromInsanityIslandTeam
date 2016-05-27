@@ -15,7 +15,7 @@ import byui.cit260.EscapeFromInsanityIsland.model.GroundChallenge;
 import byui.cit260.EscapeFromInsanityIsland.model.Location;
 import byui.cit260.EscapeFromInsanityIsland.model.Map;
 import byui.cit260.EscapeFromInsanityIsland.model.Memory;
-import byui.cit260.EscapeFromInsanityIsland.model.Opponents;
+import byui.cit260.EscapeFromInsanityIsland.model.Opponent;
 import byui.cit260.EscapeFromInsanityIsland.model.Player;
 import byui.cit260.EscapeFromInsanityIsland.model.Resource;
 import byui.cit260.EscapeFromInsanityIsland.model.Scene;
@@ -417,7 +417,7 @@ public class EscapeFromInsanityIsland {
                     
                 //Testing class OPPONENTS
                     
-                    Opponents enemy = new Opponents();
+                    Opponent enemy = new Opponent();
                     
                 //Testing Setters
                     

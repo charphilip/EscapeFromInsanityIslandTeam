@@ -21,7 +21,7 @@ public class Memory implements Serializable{
     private int yearsRemembered; 
     private String toolSaved;
     private boolean availableResourceSaved;
-
+    
     public Memory() {
     }
 

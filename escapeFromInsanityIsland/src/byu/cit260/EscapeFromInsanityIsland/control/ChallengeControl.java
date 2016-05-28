@@ -21,10 +21,31 @@ public class ChallengeControl {
     
     }
         
-    public void resetChallenge(String challenge){}
+    public void resetChallenge(Challenge challenge){
+    if (challenge.getDescription() == "Air Challenge"){
+        System.out.println ("The challenge has been rest");
+        }
+        else {System.out.println ("The challenge has not been rest"); }
+         }
     
-    public void startChallenge(String challenge){}
     
-    public void saveChallenge(String challenge){}
+    public void startChallenge(Challenge challenge){
+        if (challenge.getDescription() == "Air Challenge"){
+        System.out.println ("The challenge was saved");
+        }
+        else {System.out.println ("The tool wasn't saved"); }
+         }
+    
+    public void saveChallenge(Challenge challenge){
+        if (challenge.getDescription() == "Air Challenge"){
+           System.out.println ("The challenge was saved");
+        }
+            else{
+        
+            System.out.println ("The challenge wasn't saved");
+            
+        }     
+    
+    }
     
 }

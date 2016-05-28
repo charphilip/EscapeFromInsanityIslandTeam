@@ -31,6 +31,10 @@ public class MapControl {
     
     public String validateDirectionMovement(Player player, Action action){return "";}
     
-    public String calcMaxQuantitySteps(){return "";}
+    public String calcMaxQuantityStep(){return "";}
+    
+    public String slectSpecialMovement(Player player, Action action){return "";}
+    
+    public double calcQuantityMovement(Player player, Action action){return 0;}
     
 }

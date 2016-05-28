@@ -57,12 +57,21 @@ public class ResourceControl {
     
     public void saveTool(String memory){
     
-    
+        
+        
     }
     
-    public void deleteTool (Memory memory){
+    public void deleteTool(Memory memory){
         
+        if(memory.getToolSaved() == "Hammer"){
+         
+                    System.out.println ("The tool was deleted");
+        }else{
         
+            System.out.println ("The tool wasn't deleted");
+            
+        }
+            
         
     }
     

@@ -6,6 +6,7 @@
 package byu.cit260.EscapeFromInsanityIsland.control;
 
 import byui.cit260.EscapeFromInsanityIsland.model.Challenge;
+import byui.cit260.EscapeFromInsanityIsland.model.Memory;
 
 /**
  *
@@ -13,11 +14,14 @@ import byui.cit260.EscapeFromInsanityIsland.model.Challenge;
  */
 public class ChallengeControl {
     
-    public double countPointGained(double point, Challenge challenge){
+    public void countPointGained(double point){
         
-        challenge.getDescription();
+        Challenge challenge1 = new Challenge();
+        double count = 0;
         
-        return 0;
+        count += point;
+        
+        challenge1.setCountPointGained(count);
     
     }
         

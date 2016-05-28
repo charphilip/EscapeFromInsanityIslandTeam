@@ -20,19 +20,12 @@ public class Memory implements Serializable{
     private int experienceGained;
     private int yearsRemembered; 
     private String toolSaved;
+    private boolean availableResourceSaved;
 
     public Memory() {
     }
 
-    public String getToolSaved() {
-        return toolSaved;
-    }
-
-    public void setToolSaved(String toolSaved) {
-        this.toolSaved = toolSaved;
-    }
-
-   public String getProgress() {
+    public String getProgress() {
         return progress;
     }
 
@@ -64,21 +57,41 @@ public class Memory implements Serializable{
         this.yearsRemembered = yearsRemembered;
     }
 
+    public String getToolSaved() {
+        return toolSaved;
+    }
+
+    public void setToolSaved(String toolSaved) {
+        this.toolSaved = toolSaved;
+    }
+
+    public boolean isAvailableResourceSaved() {
+        return availableResourceSaved;
+    }
+
+    public void setAvailableResourceSaved(boolean availableResourceSaved) {
+        this.availableResourceSaved = availableResourceSaved;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.progress);
-        hash = 29 * hash + this.resourceSaved;
-        hash = 29 * hash + this.experienceGained;
-        hash = 29 * hash + this.yearsRemembered;
+        hash = 89 * hash + Objects.hashCode(this.progress);
+        hash = 89 * hash + this.resourceSaved;
+        hash = 89 * hash + this.experienceGained;
+        hash = 89 * hash + this.yearsRemembered;
+        hash = 89 * hash + Objects.hashCode(this.toolSaved);
+        hash = 89 * hash + (this.availableResourceSaved ? 1 : 0);
         return hash;
     }
 
     @Override
+    public String toString() {
+        return "Memory{" + "progress=" + progress + ", resourceSaved=" + resourceSaved + ", experienceGained=" + experienceGained + ", yearsRemembered=" + yearsRemembered + ", toolSaved=" + toolSaved + ", availableResourceSaved=" + availableResourceSaved + '}';
+    }
+
+    @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if (obj == null) {
             return false;
         }
@@ -86,6 +99,9 @@ public class Memory implements Serializable{
             return false;
         }
         final Memory other = (Memory) obj;
+        if (!Objects.equals(this.progress, other.progress)) {
+            return false;
+        }
         if (this.resourceSaved != other.resourceSaved) {
             return false;
         }
@@ -95,16 +111,16 @@ public class Memory implements Serializable{
         if (this.yearsRemembered != other.yearsRemembered) {
             return false;
         }
-        if (!Objects.equals(this.progress, other.progress)) {
+        if (!Objects.equals(this.toolSaved, other.toolSaved)) {
+            return false;
+        }
+        if (this.availableResourceSaved != other.availableResourceSaved) {
             return false;
         }
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "Memory{" + "progress=" + progress + ", resourceSaved=" + resourceSaved + ", experienceGained=" + experienceGained + ", yearsRemembered=" + yearsRemembered + '}';
-    }
+    
     
     
     

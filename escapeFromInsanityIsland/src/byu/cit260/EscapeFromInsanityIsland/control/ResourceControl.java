@@ -18,9 +18,15 @@ public class ResourceControl {
     
     public boolean checkAvailableResource(Resource resource, Memory memory){
         
-        resource.isAvailableResource();
-        
-        return false;
+                
+               if ((resource.isAvailableResource()) && (memory.isAvailableResourceSaved()) ){
+                   return true;
+               
+               }else{
+               
+                    return false;
+               
+               }
     }
     
     public void createTool(Resource resource, BuilderResource builderResource, Memory memory){

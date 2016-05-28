@@ -116,24 +116,25 @@ public class ResourceControl {
         
     public String calcQuantityTool(String quantityStored, boolean resourcesGained, String typeResource){
         
+        
+        
         String message = "";
         
-        if (resourcesGained){
+            if (resourcesGained == true){
             
-                if ((typeResource == "Ground Tool" || typeResource == "Air Tool" || typeResource == "Water Tool") && (quantityStored == "W10" && quantityStored == "N5" && quantityStored == "R2" && quantityStored == "I10")){
-                   message = ("You has created a tool!");
+                if ((typeResource == "Ground Tool") || (typeResource == "Air Tool") || (typeResource == "Water Tool") && (quantityStored == "W10 N5 R2 I10")){
+                   message = "You has created a tool!";
                 
-                }else if ((typeResource != "Ground Tool" || typeResource != "Air Tool" || typeResource !="Water Tool") && (quantityStored == "W10" && quantityStored == "N5" && quantityStored == "R2" && quantityStored == "I10")){
-                    message = ("The type of resource is invalid!");
+                
                 }
-                else if ((typeResource != "Ground Tool" || typeResource != "Air Tool" || typeResource !="Water Tool") && (quantityStored != "W10" && quantityStored != "N5" && quantityStored != "R2" && quantityStored != "I10")){
-                    message = ("The type of resource is invalid!");
+                else if ((typeResource == "Ground Tool") || (typeResource == "Air Tool") || (typeResource =="Water Tool") && (quantityStored != "W10 N5 R2 I10")){
+                    message = "The Quantity resource is invalid!";
                 }
         }else {
-            message = ("The rule is that you need to have resources gained");
+            message = "The rule is that you need to have resources gained";
         }
-    
-         return message;
+               
+        return message;
     }
         
     public boolean checkEnoughResourceGained(Challenge challenge){

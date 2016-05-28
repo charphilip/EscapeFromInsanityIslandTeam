@@ -13,7 +13,13 @@ import byui.cit260.EscapeFromInsanityIsland.model.Challenge;
  */
 public class ChallengeControl {
     
-    public double countPointGained(double point, Challenge challenge){return 0;}
+    public double countPointGained(double point, Challenge challenge){
+        
+        challenge.getDescription();
+        
+        return 0;
+    
+    }
         
     public void resetChallenge(String challenge){}
     

@@ -19,8 +19,17 @@ public class Memory implements Serializable{
     private int resourceSaved;
     private int experienceGained;
     private int yearsRemembered; 
+    private String toolSaved;
 
     public Memory() {
+    }
+
+    public String getToolSaved() {
+        return toolSaved;
+    }
+
+    public void setToolSaved(String toolSaved) {
+        this.toolSaved = toolSaved;
     }
 
    public String getProgress() {

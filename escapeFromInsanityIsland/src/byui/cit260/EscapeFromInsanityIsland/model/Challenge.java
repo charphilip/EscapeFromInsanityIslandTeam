@@ -16,7 +16,7 @@ public class Challenge implements Serializable{
     
     private String description;
     private String resourcesGained;
-    private String displaySimbol;
+    
 
     public Challenge() {
     }
@@ -37,20 +37,14 @@ public class Challenge implements Serializable{
         this.resourcesGained = resourcesGained;
     }
 
-    public String getDisplaySimbol() {
-        return displaySimbol;
-    }
-
-    public void setDisplaySimbol(String displaySimbol) {
-        this.displaySimbol = displaySimbol;
-    }
+    
 
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 53 * hash + Objects.hashCode(this.description);
         hash = 53 * hash + Objects.hashCode(this.resourcesGained);
-        hash = 53 * hash + Objects.hashCode(this.displaySimbol);
+        
         return hash;
     }
 
@@ -68,16 +62,14 @@ public class Challenge implements Serializable{
         }
         if (!Objects.equals(this.resourcesGained, other.resourcesGained)) {
             return false;
-        }
-        if (!Objects.equals(this.displaySimbol, other.displaySimbol)) {
-            return false;
+        
         }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Challenges{" + "description=" + description + ", resourcesGained=" + resourcesGained + ", displaySimbol=" + displaySimbol + '}';
+        return "Challenges{" + "description=" + description + ", resourcesGained=" + resourcesGained  + '}';
     }    
     
 }

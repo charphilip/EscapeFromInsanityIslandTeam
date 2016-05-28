@@ -26,9 +26,16 @@ public class ResourceControl {
             return false;
         }
     }
-    public void createTool(Resource resource, BuilderResource builderResource, Memory memory){
     
-        
+    public String createTool(Resource resource, BuilderResource builderResource, Memory memory){
+      
+       if(resource.isAvailableResource()){
+       
+            Memory memory1 = new Memory();
+            memory1.setToolSaved(builderResource.getName());
+        }
+       
+       return "The tool was created!";
         
     }
     
@@ -48,62 +55,85 @@ public class ResourceControl {
         }
         }
     
-    public double setSizeTool(String builderResource){return 0;}
+    public String setSizeTool(BuilderResource builderResource){
+        
+        BuilderResource bResource1 = new BuilderResource();
+                
+        bResource1.setName(builderResource.getName());
+        bResource1.setSizeTool(builderResource.getSizeTool());
+        
+        return "The size was set";
+    }
+  
     
-    public double calcQuantityRawMaterial(String sizeTool, int quantityToolToCreate, boolean resourcesGained){
+    public String calcQuantityRawMaterial(String sizeTool, int quantityToolToCreate, boolean resourcesGained){
+        
+        
+        String message = "";
+        
         if (sizeTool == "Big" && quantityToolToCreate == 1 && resourcesGained == true){
-            System.out.println ("Wood 30 pieces && Iron 50 pieces && Nails 10 pieces && Rope 10 pieces");
-            return -1;
-            else if (sizeTool != "Big" && quantityToolToCreate == 1 && resourcesGained == true){
-            System.out.println ("The size is invalid");
-            return -1;}
-            else if (sizeTool == "Big" && quantityToolToCreate != 1 && resourcesGained == true){
-            System.out.println ("The quantity of created tool must be one");
-            return-1;}
-            else if (sizeTool == "Big" && quantityToolToCreate == 1 && resourcesGained == false){
-            System.out.println ("The end user cannot create any tool without ResourceGained");
-            return-1;}}
-        if (sizeTool == "Medium" && quantityToolToCreate == 1 && resourcesGained == true){
-            System.out.println ("Wood 40 pieces && Iron 30 pieces && Nails 15 pieces && Rope 15 pieces");
-            return -1;
-            else if (sizeTool != "Medium" && quantityToolToCreate == 1 && resourcesGained == true){
-            System.out.println ("The size is invalid");
-            return -1;}
-            else if (sizeTool == "Medium" && quantityToolToCreate != 1 && resourcesGained == true){
-            System.out.println ("The quantity of created tool must be one");
-            return-1;}
-            else if (sizeTool == "Medium" && quantityToolToCreate == 1 && resourcesGained == false){
-            System.out.println ("The end user cannot create any tool without ResourceGained");
-            return-1;}}
-        if (sizeTool == "Small" && quantityToolToCreate == 1 && resourcesGained == true){
-            System.out.println ("Wood 50 pieces && Iron 10 pieces && Nails 20 pieces && Rope 20 pieces");
-            return -1;
-            else if (sizeTool != "Small" && quantityToolToCreate == 1 && resourcesGained == true){
-            System.out.println ("The size is invalid");
-            return -1;}
-            else if (sizeTool == "Small" && quantityToolToCreate != 1 && resourcesGained == true){
-            System.out.println ("The quantity of created tool must be one");
-            return-1;}
-            else if (sizeTool == "Small" && quantityToolToCreate == 1 && resourcesGained == false){
-            System.out.println ("The end user cannot create any tool without ResourceGained");
-            return-1;}}
+            message = ("Wood 30 pieces && Iron 50 pieces && Nails 10 pieces && Rope 10 pieces");
+            
+        }else if ((sizeTool != "Big") && (quantityToolToCreate == 1) && (resourcesGained == true)){
+            message = ("The size is invalid");
+                
+        }else if (sizeTool == "Big" && quantityToolToCreate != 1 && resourcesGained == true){
+            message = ("The quantity of created tool must be one");
+        }else if (sizeTool == "Big" && quantityToolToCreate == 1 && resourcesGained == false){
+            message = ("The end user cannot create any tool without ResourceGained");
         }
         
+        if (sizeTool == "Medium" && quantityToolToCreate == 1 && resourcesGained == true){
+            message = ("Wood 40 pieces && Iron 30 pieces && Nails 15 pieces && Rope 15 pieces");
+            
+        }else if (sizeTool != "Medium" && quantityToolToCreate == 1 && resourcesGained == true){
+            message = ("The size is invalid");
+            
+        }else if (sizeTool == "Medium" && quantityToolToCreate != 1 && resourcesGained == true){
+            message = ("The quantity of created tool must be one");
+            
+        }else if (sizeTool == "Medium" && quantityToolToCreate == 1 && resourcesGained == false){
+            message = ("The end user cannot create any tool without ResourceGained");
+            
+        }
+        
+        if (sizeTool == "Small" && quantityToolToCreate == 1 && resourcesGained == true){
+            message = ("Wood 50 pieces && Iron 10 pieces && Nails 20 pieces && Rope 20 pieces");
+            
+        }else if (sizeTool != "Small" && quantityToolToCreate == 1 && resourcesGained == true){
+            message = ("The size is invalid");
+            
+        }else if (sizeTool == "Small" && quantityToolToCreate != 1 && resourcesGained == true){
+            message = ("The quantity of created tool must be one");
+            
+        }else if (sizeTool == "Small" && quantityToolToCreate == 1 && resourcesGained == false){
+            message = ("The end user cannot create any tool without ResourceGained");
+            
+        }
+        
+        return message;
+    }
+        
     public String calcQuantityTool(String quantityStored, boolean resourcesGained, String typeResource){
+        
+        String message = "";
         
         if (resourcesGained){
             
                 if ((typeResource == "Ground Tool" || typeResource == "Air Tool" || typeResource == "Water Tool") && (quantityStored == "W10" && quantityStored == "N5" && quantityStored == "R2" && quantityStored == "I10")){
-                System.out.println("You has created a tool!");
-                return -1;
-                else if ((typeResource != "Ground Tool" || typeResource != "Air Tool" || typeResource !="Water Tool") && (quantityStored == "W10" && quantityStored == "N5" && quantityStored == "R2" && quantityStored == "I10")){
-                System.out.println ("The type of resource is invalid!");
-                return -1;}
+                   message = ("You has created a tool!");
+                
+                }else if ((typeResource != "Ground Tool" || typeResource != "Air Tool" || typeResource !="Water Tool") && (quantityStored == "W10" && quantityStored == "N5" && quantityStored == "R2" && quantityStored == "I10")){
+                    message = ("The type of resource is invalid!");
+                }
                 else if ((typeResource != "Ground Tool" || typeResource != "Air Tool" || typeResource !="Water Tool") && (quantityStored != "W10" && quantityStored != "N5" && quantityStored != "R2" && quantityStored != "I10")){
-                System.out.println ("The type of resource is invalid!");
-                return -1;}}
-        else {
-            System.out.println ("The rule is that you need to have resources gained");}}
+                    message = ("The type of resource is invalid!");
+                }
+        }else {
+            message = ("The rule is that you need to have resources gained");
+        }
+    
+         return message;
     }
         
     public boolean checkEnoughResourceGained(Challenge challenge){

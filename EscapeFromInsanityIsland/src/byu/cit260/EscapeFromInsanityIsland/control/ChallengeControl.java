@@ -32,7 +32,6 @@ public class ChallengeControl {
         else {System.out.println ("The challenge has not been rest"); }
          }
     
-    
     public void startChallenge(Challenge challenge){
         if (challenge.getDescription() == "Air Challenge"){
         System.out.println ("The challenge was saved");

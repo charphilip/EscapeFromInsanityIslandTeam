@@ -7,6 +7,9 @@ package byu.cit260.EscapeFromInsanityIsland.control;
 
 import byui.cit260.EscapeFromInsanityIsland.model.Player;
 import byui.cit260.EscapeFromInsanityIsland.model.Character;
+import byui.cit260.EscapeFromInsanityIsland.model.Location;
+import byui.cit260.EscapeFromInsanityIsland.model.Map;
+import byui.cit260.EscapeFromInsanityIsland.model.Memory;
 
 /**
  *
@@ -20,9 +23,39 @@ public class GameControl {
     
     }
     
-    public void initializeMap(String map, String location){}
+    public void initializeMap(Map map, Location location, Memory memory){
     
-    public String saveGame(String player){return "";}
+       Map map1 = new Map();
+       
+       Location location1 = new Location();
+       
+        if (location.equals(location1) && (map.equals(map1))){
+        
+            location1.getColumn();
+            location1.getRow();
+            
+            map1.getColumnCount();
+            map1.getRowCount();
+                    
+        
+        }
+        
+       
+       location1 = location;
+       
+        System.out.println("Map starting");
+       
+    
+    }
+    
+    public String saveGame(String player){
+        
+        Memory memory1 = new Memory();
+        
+        memory1.setProgress(player);
+        
+        return "Game saved ";
+    }
     
     public String retrieveGame(String Player){return "";}
     
